@@ -24,7 +24,7 @@ try {
         
         if ($inTracks) {
             # Parse track names (looking for lines with 2 spaces indentation)
-            if ($line -match "^  (\w+):$") {
+            if ($line -match "^  ([\w-]+):$") {
                 $currentTrack = $matches[1]
                 $tracks[$currentTrack] = @{
                     name = $currentTrack
